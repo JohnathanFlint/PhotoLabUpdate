@@ -5,7 +5,7 @@ package pixLab.classes;
  * Picture class methods. Uncomment the methods and the code in the main to
  * test.
  * 
- * @author Barbara Ericson
+ * @author Nicholas White
  */
 public class PictureTester
 {
@@ -16,6 +16,38 @@ public class PictureTester
 		beach.explore();
 		beach.zeroBlue();
 		beach.explore();
+	}
+	
+	public static void testKeepOnlyBlue()
+	{
+		Picture beach = new Picture("beach.jpg");
+		beach.explore();
+		beach.keepOnlyBlue();
+		beach.explore();
+	}
+	
+	public static void testNegate()
+	{
+		Picture beach = new Picture("beach.jpg");
+		beach.explore();
+		beach.negate();
+		beach.explore();
+	}
+	
+	public static void testGrayscale()
+	{
+		Picture beach = new Picture("beach.jpg");
+		beach.explore();
+		beach.grayscale();
+		beach.explore();
+	}
+	
+	public static void testFixUnderwater()
+	{
+		Picture water = new Picture("water.jpg");
+		water.explore();
+		water.fixUnderwater();
+		water.explore();
 	}
 
 	/** Method to test mirrorVertical */
@@ -44,6 +76,22 @@ public class PictureTester
 		koala.explore();
 	}
 	
+	public static void testMirrorDiagonal()
+	{
+		Picture koala = new Picture("koala.jpg");
+		koala.explore();
+		koala.mirrorDiagonal();
+		koala.explore();
+	}
+	
+	public static void testMirrorDiagonalBottomRightToTopLeft()
+	{
+		Picture koala = new Picture("koala.jpg");
+		koala.explore();
+		koala.mirrorDiagonalBottomRightToTopLeft();
+		koala.explore();
+	}
+	
 	/** Method to test mirrorTemple */
 	public static void testMirrorTemple()
 	{
@@ -51,6 +99,13 @@ public class PictureTester
 		temple.explore();
 		temple.mirrorTemple();
 		temple.explore();
+	}
+	
+	public static void testMirrorGull()
+	{
+		Picture seagull = new Picture("seagull.jpg");
+		seagull.mirrorGull();
+		seagull.explore();
 	}
 
 	/** Method to test the collage method */
@@ -67,6 +122,45 @@ public class PictureTester
 		Picture swan = new Picture("swan.jpg");
 		swan.edgeDetection(10);
 		swan.explore();
+	}
+	
+	public static void allTheThings()
+	{
+		Picture koala = new Picture ("koala.jpg");
+		koala.mirrorHorizontalBottomToTop();
+		koala.explore();
+		koala.mirrorDiagonal();
+		koala.explore();
+		koala.mirrorVerticleRightToLeft();
+		koala.explore();
+		Picture cycle = new Picture ("blueMotorcycle.jpg");
+		cycle.mirrorHorizontalBottomToTop();
+		cycle.explore();
+		cycle.mirrorDiagonal();
+		cycle.explore();
+		cycle.mirrorVerticleRightToLeft();
+		cycle.explore();
+		Picture swan = new Picture ("swan.jpg");
+		swan.mirrorHorizontalBottomToTop();
+		swan.explore();
+		swan.mirrorDiagonal();
+		swan.explore();
+		swan.mirrorVerticleRightToLeft();
+		swan.explore();
+		Picture beach = new Picture ("beach.jpg");
+		beach.mirrorHorizontalBottomToTop();
+		beach.explore();
+		beach.mirrorDiagonal();
+		beach.explore();
+		beach.mirrorVerticleRightToLeft();
+		beach.explore();
+		//koala.write("allTheThings.jpg");
+	}
+	
+	public static void preview()
+	{
+		Picture preview = new Picture("seagull.jpg");
+		preview.explore();
 	}
 
 	/**
@@ -86,8 +180,8 @@ public class PictureTester
 		// testFixUnderwater();
 		//testMirrorVertical();
 		//testMirrorVerticleRightToLeft();
-		testmirrorHorizontalBottomToTop();
-		// testMirrorTemple();
+		//testmirrorHorizontalBottomToTop();
+		 //testMirrorTemple();
 		// testMirrorArms();
 		// testMirrorGull();
 		// testMirrorDiagonal();
@@ -101,5 +195,14 @@ public class PictureTester
 		// testSetRedToHalfValueInTopHalf();
 		// testClearBlueOverValue(200);
 		// testGetAverageForColumn(0);
+		//testFixUnderwater();
+		//testKeepOnlyBlue();
+		//testNegate();
+		//testGrayscale();
+		//testMirrorDiagonal();
+		//testMirrorDiagonalBottomRightToTopLeft();
+		//allTheThings();
+		//preview();
+		testMirrorGull();
 	}
 }
