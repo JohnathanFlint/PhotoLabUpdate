@@ -107,6 +107,14 @@ public class PictureTester
 		seagull.mirrorGull();
 		seagull.explore();
 	}
+	
+	public static void testMirrorArms()
+	{
+		Picture snowman = new Picture("snowman.jpg");
+		snowman.explore();
+		snowman.mirrorArms();
+		snowman.explore();
+	}
 
 	/** Method to test the collage method */
 	public static void testCollage()
@@ -166,9 +174,25 @@ public class PictureTester
 	
 	public static void preview()
 	{
-		Picture preview = new Picture("seagull.jpg");
-		preview.explore();
+		//Picture preview1 = new Picture("blueMotorcycle.jpg");
+		Picture preview2 = new Picture("koalaMinnie.jpg");
+		//preview1.explore();
+		preview2.explore();
 	}
+	
+	public static void testCopy()
+	{
+		Picture koala = new Picture("koalaMinnie.jpg");
+		Picture bike = new Picture("blueMotorcycle.jpg");
+		bike.explore();
+		bike.copy2(koala, 0, 230, 300, 366);
+		bike.explore();
+	}
+	
+	//public static testFullRandom()
+	//{
+	//	Picture random = Picture
+	//}
 
 	/**
 	 * Main method for testing. Every class can have a main method in Java
@@ -193,9 +217,10 @@ public class PictureTester
 		// testMirrorGull();
 		// testMirrorDiagonal();
 		// testCollage();
-		// testCopy();
+		   testCopy();
+		
 		// testEdgeDetection();
-		 testEdgeDetection2();
+		// testEdgeDetection2();
 		// testChromakey();
 		// testEncodeAndDecode();
 		// testGetCountRedOverValue(250);
@@ -211,5 +236,7 @@ public class PictureTester
 		//allTheThings();
 		//preview();
 		//testMirrorGull();
+		//testFullRandom();
+		//testMirrorArms();
 	}
 }
