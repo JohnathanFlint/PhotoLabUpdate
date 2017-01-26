@@ -189,6 +189,13 @@ public class PictureTester
 		bike.explore();
 	}
 	
+	public static void testPersonalCollage()
+	{
+		Picture canvas = new Picture("1000x700.jpg");
+		canvas.createPersonalCollage();
+		canvas.explore();
+	}
+	
 	//public static testFullRandom()
 	//{
 	//	Picture random = Picture
@@ -217,7 +224,8 @@ public class PictureTester
 		// testMirrorGull();
 		// testMirrorDiagonal();
 		// testCollage();
-		   testCopy();
+			testPersonalCollage();
+		// testCopy();
 		
 		// testEdgeDetection();
 		// testEdgeDetection2();
