@@ -403,10 +403,9 @@ public class Picture extends SimplePicture
   
   public void createPersonalCollage()
   {
-    Picture koala = new Picture("koalaMinnie.jpg");
+    Picture koala = new Picture("koalaCropped.jpg");
     Picture captainCanada = new Picture("CaptainCanada.jpg");
   //turn to this.copy2
-    this.copy2(koala, 100, 150, 500, 390);
     this.copy(captainCanada,100,0);
   //turn to this.copy2
     this.copy(koala,200,0);
@@ -414,8 +413,9 @@ public class Picture extends SimplePicture
     flowerNoBlue.zeroBlue();
     this.copy(flowerNoBlue,300,0);
     //turn to this.copy2
-    this.copy(koala,400,0);
+    this.copy(koala,325, 70);
     this.copy(captainCanada,500,0);
+    this.copy(koala, 600, 0);
     this.mirrorVertical();
     this.write("personalCollage.jpg");
   }
