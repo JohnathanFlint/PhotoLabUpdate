@@ -599,6 +599,22 @@ public class SimplePicture implements DigitalPicture
 		graphics2d.drawString(message, xPos, yPos);
 
 	}
+	
+	public void addBlackMessage(String message, int xPos, int yPos)
+	{
+		// get a graphics context to use to draw on the buffered image
+		Graphics2D graphics2d = bufferedImage.createGraphics();
+
+		// set the color to white
+		graphics2d.setPaint(Color.black);
+
+		// set the font to Helvetica bold style and size 16
+		graphics2d.setFont(new Font("Brush Script Std", Font.BOLD, 50));
+
+		// draw the message
+		graphics2d.drawString(message, xPos, yPos);
+
+	}
 
 	/**
 	 * Method to draw a string at the given location on the picture

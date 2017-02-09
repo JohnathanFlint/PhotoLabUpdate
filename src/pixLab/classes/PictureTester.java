@@ -196,6 +196,18 @@ public class PictureTester
 		canvas.explore();
 	}
 	
+	public static void testPoroValentinesMeme()
+	{
+		Picture poro = new Picture("PoroSnacking.jpg");
+		poro.valentinesPoroMeme();
+	}
+	
+	public static void testAssassinValentinesMeme()
+	{
+		Picture assassin = new Picture("assassin.jpg");
+		assassin.valentinesAssassinMeme();
+	}
+	
 	//public static testFullRandom()
 	//{
 	//	Picture random = Picture
@@ -224,7 +236,7 @@ public class PictureTester
 		// testMirrorGull();
 		// testMirrorDiagonal();
 		// testCollage();
-			testPersonalCollage();
+		// testPersonalCollage();
 		// testCopy();
 		
 		// testEdgeDetection();
@@ -246,5 +258,8 @@ public class PictureTester
 		//testMirrorGull();
 		//testFullRandom();
 		//testMirrorArms();
+		//testPoroValentinesMeme();
+		testAssassinValentinesMeme();
+
 	}
 }

@@ -332,7 +332,7 @@ public class Picture extends SimplePicture
 			  leftPixel = pixels[row][col];
 			  rightPixel = pixels[(mirrorPoint1+40)-(row-155)][col];
 			  
-			  rightPixel.setColor(leftPixel.getColor());			  
+			  rightPixel.setColor(leftPixel.getColor());			
 		  }
 	  }
   }
@@ -515,6 +515,29 @@ public class Picture extends SimplePicture
 			  currentPixel.setColor(new Color(red,currentPixel.getGreen(),currentPixel.getBlue()));
 		  }
 	  }
+  }
+  
+  public void valentinesPoroMeme()
+  {
+	  explore();
+	  addMessage("Roses are red"/* violets are blue, sorry but I won't share my snacks with you.*/, 20, 30);
+	  addMessage("Violets are blue", 20, 50);
+	  addMessage("Sorry I won't share my snacks with you", 20, 70);
+	  explore();
+	  this.write("poroValentines");
+	  
+	  //this.write("valentinesPoro");
+  }
+  
+  public void valentinesAssassinMeme()
+  {
+	  explore();
+	  this.addBlackMessage("Roses are red"/* violets are blue, sorry but I won't share my snacks with you.*/, 15, 40);
+	  this.addBlackMessage("Violets are blue", 15, 80);
+	  this.addBlackMessage("I promise I won't", 15, 120);
+	  this.addBlackMessage("assassinate you", 15, 150);
+	  explore();
+	  this.write("assassinValentines");
   }
   
   
