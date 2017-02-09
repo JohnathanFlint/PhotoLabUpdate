@@ -531,13 +531,12 @@ public class Picture extends SimplePicture
   
   public void valentinesAssassinMeme()
   {
-	  explore();
 	  this.addBlackMessage("Roses are red"/* violets are blue, sorry but I won't share my snacks with you.*/, 15, 40);
 	  this.addBlackMessage("Violets are blue", 15, 80);
 	  this.addBlackMessage("I promise I won't", 15, 120);
 	  this.addBlackMessage("assassinate you", 15, 150);
 	  explore();
-	  this.write("assassinValentines");
+	  this.write("assassinValentines.jpg");
   }
   
   
