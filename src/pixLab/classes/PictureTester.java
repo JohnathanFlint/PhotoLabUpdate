@@ -212,6 +212,15 @@ public class PictureTester
 	//{
 	//	Picture random = Picture
 	//}
+	
+	public static void glitchArt()
+	{
+		Picture assassin = new Picture("assassinValentines.jpg");
+		assassin.overlayAssassin();
+		//assassin.edgeDetection(20);
+		//assassin.negate();
+	    assassin.explore();
+	}
 
 	/**
 	 * Main method for testing. Every class can have a main method in Java
@@ -259,7 +268,8 @@ public class PictureTester
 		//testFullRandom();
 		//testMirrorArms();
 		//testPoroValentinesMeme();
-		testAssassinValentinesMeme();
+		//testAssassinValentinesMeme();
+		glitchArt();
 
 	}
 }

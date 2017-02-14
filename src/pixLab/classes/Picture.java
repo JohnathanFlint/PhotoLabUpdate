@@ -306,6 +306,8 @@ public class Picture extends SimplePicture
 	  }
   }
   
+ 
+  
   public void mirrorArms()
   {
 	  
@@ -382,6 +384,29 @@ public class Picture extends SimplePicture
         toPixel.setColor(fromPixel.getColor());
       }
     }   
+  }
+  
+  public void overlayAssassin()
+  {
+	  int mirrorPoint = 35;
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  Pixel [][] pixels = this.getPixels2D();
+	  
+	  for(int row = 0; row < 1035; row++)
+	  {
+		  for(int col = 15; col < 1000; col++)
+		  {
+			  leftPixel = pixels[row][col];
+			  rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+			  
+			  if(rightPixel.getColor() == Color.white)
+			  {
+				  rightPixel.setColor(leftPixel.getColor());
+
+			  }
+		  }
+	  }
   }
 
   /** Method to create a collage of several pictures */
