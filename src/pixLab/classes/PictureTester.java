@@ -175,7 +175,7 @@ public class PictureTester
 	public static void preview()
 	{
 		//Picture preview1 = new Picture("blueMotorcycle.jpg");
-		Picture preview2 = new Picture("koalaMinnie.jpg");
+		Picture preview2 = new Picture("assassinValentines.jpg");
 		//preview1.explore();
 		preview2.explore();
 	}
@@ -208,6 +208,12 @@ public class PictureTester
 		assassin.valentinesAssassinMeme();
 	}
 	
+	public static void manyFiltersAssassin()
+	{
+		Picture assassin = new Picture("assassinValentines.jpg");
+		assassin.manyFiltersAssassin();
+	}
+	
 	//public static testFullRandom()
 	//{
 	//	Picture random = Picture
@@ -216,11 +222,15 @@ public class PictureTester
 	public static void glitchArt()
 	{
 		Picture assassin = new Picture("assassinValentines.jpg");
-		assassin.overlayAssassin();
-		//assassin.edgeDetection(20);
-		//assassin.negate();
-	    assassin.explore();
+		 assassin.copy3(assassin, 70, 385, 1020, 990, 60, 300);
+		 //assassin.edgeDetection(10);
+		 assassin.grayscale();
+		 assassin.negate();
+		 assassin.explore();
+		 assassin.write("glitchAssassin.jpg");
+	   
 	}
+	
 
 	/**
 	 * Main method for testing. Every class can have a main method in Java
@@ -270,6 +280,7 @@ public class PictureTester
 		//testPoroValentinesMeme();
 		//testAssassinValentinesMeme();
 		glitchArt();
+		//manyFiltersAssassin();
 
 	}
 }
