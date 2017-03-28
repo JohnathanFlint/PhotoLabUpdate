@@ -231,6 +231,17 @@ public class PictureTester
 	   
 	}
 	
+	public static void testSteg()
+	{
+		Picture source = new Picture("thehider.png");
+		Picture hidden = new Picture("tohide.png");
+		source.explore();
+		source.encode(hidden);
+		source.explore();
+		hidden.explore();
+		source.decode();
+	}
+	
 
 	/**
 	 * Main method for testing. Every class can have a main method in Java
@@ -279,8 +290,9 @@ public class PictureTester
 		//testMirrorArms();
 		//testPoroValentinesMeme();
 		//testAssassinValentinesMeme();
-		glitchArt();
+		//glitchArt();
 		//manyFiltersAssassin();
+		testSteg();
 
 	}
 }
